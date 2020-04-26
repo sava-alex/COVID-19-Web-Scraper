@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <!-- Bootstrap CSS -->
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 
+    <title>COVID19 Cases</title>
+</head>
+<body style="text-align:center;">
+    <br>
+    <h2>Covid19 pandemic No. of cases by country at {{date}} </h2>
+    <div class="container">
+    <div class="table-responsive">          
+            <table class="table">
+            
+            <tr>
+            <thead>
+            <th scope="col">Countries</th>
+            </thead>
+            
+            <tbody>
+            {%for country in countries%}
+            <td>{{country}}</td>
+            {%endfor%}
+            </tbody>
+            </tr>
+          
+            <tr>
+            <thead>
+            <th scope="col">Cases</th>
+            </thead>
+
+            <tbody>
+            {%for case in cases%}
+            <td>{{case}}</td>
+            {%endfor%}
+            </tbody>
+            </tr>
+
+        </table>
+        </div>
+        </div>
+        </body>
+        </html>

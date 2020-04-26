@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+ 
+    <title>COVID19 Cases</title>
+</head>
+<body style="text-align:center;">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    <br><br><br>
+    <p class="h2">Covid19 pandemic No. of cases by country at {{date}} </p>
+    <div class="container">
+    <div class="table-responsive">          
+            <table class="table table-striped table-dark">
+            
+            <tr>
+            <thead>
+            <th bgcolor="##ffc61a" scope="col">Countries</th>
+            </thead>
+            
+            <tbody>
+            {%for country in countries%}
+            <td>{{country}}</td>
+            {%endfor%}
+            </tbody>
+            </tr>
+          
+            <tr>
+            <thead>
+            <th bgcolor="##ffc61a" scope="col">Cases</th>
+            </thead>
+
+            <tbody>
+            {%for case in cases%}
+            <td>{{case}}</td>
+            {%endfor%}
+            </tbody>
+            </tr>
+
+            <tr>
+                <thead>
+                <th bgcolor="##ffc61a" scope="col">New</th>
+                </thead>
+    
+                <tbody>
+                {%for new_case in new_cases%}
+                <td><font color="#e60000" style="font-weight:bold">{{new_case}}</font></td>
+                {%endfor%}
+                </tbody>
+                </tr>
+
+        </table>
+        </div>
+        </div>
+        </body>
+        </html>
